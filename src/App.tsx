@@ -36,12 +36,12 @@ function App() {
 
   React.useEffect(() => {
     function parseHash() {
+      setHashParsed(true);
       const configuration = parseConfiguration(window.location.hash.slice(1));
       if (Object.keys(configuration).sort().join() !== 'body,head,leftArm,legs,rightArm') {
         return;
       }
       setRobotConfiguration(configuration);
-      setHashParsed(true);
     }
     parseHash();
     window.addEventListener('hashchange', parseHash);
