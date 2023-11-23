@@ -1,0 +1,95 @@
+.part {
+  z-index: 1;
+}
+
+.robot {
+  display: grid;
+  grid-template-rows: 45% 27% 28%;
+  grid-template-columns: 33% 34% 33%;
+  aspect-ratio: 1 / 1;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.head {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  align-self: flex-end;
+}
+
+.body {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.legs {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+}
+
+.rightArm {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.leftArm {
+  grid-column: 3;
+  grid-row: 1 / span 3;
+}
+
+.full {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 3;
+  max-height: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+.selection {
+  background-color: white;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  border-radius: 5%;
+}
+
+.selection-body {
+  grid-area: 2 / 2 / 3 / 3;
+  top: -12%;
+}
+
+.selection-head {
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: flex-end;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  top: 5%;
+}
+
+.selection-legs {
+  grid-area: 3 / 2 / 4 / 3;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: -12%;
+}
+
+.selection-rightArm {
+  grid-area: 2 / 1 / 3 / 2;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  top: -12%;
+  left: 12%;
+}
+
+.selection-leftArm {
+  grid-area: 2 / 3 / 3 / 4;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  top: -12%;
+  right: 12%;
+}
+
+.selection-full {
+  grid-area: 1 / 1 / 4 / 4;
+  align-self: center;
+  border-radius: 50%;
+}

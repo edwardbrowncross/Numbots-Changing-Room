@@ -1,0 +1,106 @@
+#container {
+  background-image: url(https://play.numbots.com/static/media/custom-shack-animation.c0e3a978.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#container h1 {
+  font-size: 3rem;
+  color: white;
+  text-shadow:
+    2px 0px 0px #fd00fd,
+    0px 2px 0px #fd00fd,
+    -2px 0px 0px #fd00fd,
+    0px -2px 0px #fd00fd,
+    1px 1px #fd00fd,
+    -1px -1px 0px #fd00fd,
+    1px -1px 0px #fd00fd,
+    -1px 1px 0px #fd00fd;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+}
+
+#header {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+#robot-section {
+  flex-grow: 1;
+  flex-basis: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+}
+
+#chooser-section {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  justify-self: flex-end;
+  z-index: 9;
+}
+
+#cost {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  display: flex;
+  background-color: #475a63;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  align-items: center;
+}
+
+#cost img {
+  height: 4rem;
+  width: 4rem;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 1600px){
+  #header {
+    width: 500px;
+  }
+  #cost {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  #header {
+    display: none;
+  }
+  #cost {
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    max-width: 80%;
+  }
+}
+
+@media (max-height: 600px) {
+  #header {
+    display: none;
+  }
+  #cost {
+    top: 2%;
+    font-size: 1.5em;
+  }
+  #cost img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
