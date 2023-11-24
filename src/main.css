@@ -8,6 +8,9 @@ body {
 }
 
 /* https://codepo8.github.io/css-fork-on-github-ribbon/ */
+#forkongithub {
+  display: none;
+}
 #forkongithub a {
   background: #fff;
   color: #000;
