@@ -82,7 +82,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5vh;
+  font-size: min(5vh, 5vw);
+  padding: 0 25%;
+  text-align: center;
 }
 
 @media (max-width: 1600px){
