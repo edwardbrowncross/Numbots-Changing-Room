@@ -50,6 +50,7 @@
   display: flex;
   justify-content: center;
   z-index: 9;
+  position: relative;
 }
 
 #cost {
@@ -68,6 +69,20 @@
   height: 4rem;
   width: 4rem;
   margin-right: 0.5rem;
+}
+
+#instructions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(64, 90, 98, 0.9);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
 }
 
 @media (max-width: 1600px){

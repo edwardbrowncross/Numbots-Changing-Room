@@ -26,6 +26,7 @@ function App() {
   });
   const [selectedParts, setSelectedParts] = React.useState<(keyof RobotConfiguration)[]>([]);
   const [hashParsed, setHashParsed] = React.useState(false);
+  const [everSelected, setEverSelected] = React.useState(false);
 
   React.useEffect(() => {
     if (!hashParsed) {
@@ -63,6 +64,7 @@ function App() {
         setSelectedParts([part])
       }
     }
+    setEverSelected(true);
   }
 
   const updateSelected = (skin: string) => {
@@ -85,7 +87,11 @@ function App() {
         />
       </div>
       <div id="chooser-section">
-        <RobotChooser selected={selectedParts.map(p => robotConfiguration[p])} onSelect={updateSelected} />
+        <RobotChooser
+          selected={selectedParts.map(p => robotConfiguration[p])}
+          onSelect={updateSelected}
+        />
+        {!everSelected && <div id="instructions">Click on a body part you want to change</div>}
       </div>
       <div id="cost">
         <img src={coins} alt="Coins" />
