@@ -77,7 +77,12 @@ function App() {
         <h1>Numbots Changing Room</h1>
       </div>
       <div id="robot-section">
-        <Robot configuration={robotConfiguration} selectedParts={selectedParts} onPartClick={handlePartClick} />
+        <Robot
+          configuration={robotConfiguration}
+          selectedParts={selectedParts}
+          onPartClick={handlePartClick}
+          style={{height: 'min(100vw, 100%)'}}
+        />
       </div>
       <div id="chooser-section">
         <RobotChooser selected={selectedParts.map(p => robotConfiguration[p])} onSelect={updateSelected} />

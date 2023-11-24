@@ -7,8 +7,6 @@
   grid-template-rows: 45% 27% 28%;
   grid-template-columns: 33% 34% 33%;
   aspect-ratio: 1 / 1;
-  max-height: 100%;
-  max-width: 100%;
 }
 
 .head {
