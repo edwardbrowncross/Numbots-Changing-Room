@@ -83,7 +83,7 @@ function App() {
           configuration={robotConfiguration}
           selectedParts={selectedParts}
           onPartClick={handlePartClick}
-          style={{height: 'min(100vw, 100%)'}}
+          style={{ height: 'min(100vw, 100%)' }}
         />
       </div>
       <div id="chooser-section">
@@ -95,8 +95,8 @@ function App() {
       </div>
       <div id="cost">
         <img src={coins} alt="Coins" />
-        <p>Total Cost:&nbsp;</p>
-        <p>{getCost(robotConfiguration)}</p>
+        <p>Total Cost: {getCost(robotConfiguration)}</p>
+        {selectedParts.length > 0 && <p style={{opacity:0.5}}>(Part Cost: {getCost(robotConfiguration, selectedParts)})</p>}
       </div>
     </div>
   )

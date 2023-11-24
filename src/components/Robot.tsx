@@ -24,8 +24,11 @@ export type RobotConfiguration = {
   legs: string;
 };
 
-export const getCost = (configuration: RobotConfiguration) => {
+export const getCost = (configuration: RobotConfiguration, partFilter?: string[]) => {
   return Object.entries(configuration).reduce((acc, [part, skin]) => {
+    if (partFilter && !partFilter.includes(part)) {
+      return acc
+    }
     const robot = robots.find(r => r.name === skin)
     if (!robot) {
       console.warn(`Could not find robot with name ${skin}`)
